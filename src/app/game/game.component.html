@@ -1,7 +1,15 @@
 <div class="field">
   <div class="card-stack">
-    @for (card of [0,1,2,3,4]; track $index) {
-        <img [ngStyle]="{'right.px': $index * 5}" src="./assets/img/cards/card_cover.png" alt="" />
+    @for (card of [0,1,2,3]; track $index) {
+    <img
+      [ngStyle]="{ 'right.px': $index * 5 }"
+      src="./assets/img/cards/card_cover.png"
+      alt=""
+    />
     }
+    <img (click)="takeCard()" class="top-card" 
+     [ngStyle]="{ 'right.px': 4 * 5 }" src="./assets/img/cards/card_cover.png" alt=""/>
+    <img (click)="takeCard()" *ngIf="pickCardAnimation" [class.take-card]="pickCardAnimation" class="take-card" 
+     [ngStyle]="{ 'right.px': 4 * 5 }" src="./assets/img/cards/{{ currentCard }}.png" alt=""/>
   </div>
 </div>
