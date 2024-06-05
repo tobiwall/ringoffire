@@ -64,7 +64,7 @@ export class GameComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(name => {
-      if (name && name > 0) {
+      if (name) {
       this.game.players.push(name);
       }
     });
