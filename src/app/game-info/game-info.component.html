@@ -1,9 +1,6 @@
 <mat-card class="card-bottom-info">
-  <mat-card-title>Title</mat-card-title>
-  <mat-card-content>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-    distinctio amet neque ad corrupti non odio, nostrum, omnis fuga eos itaque
-    soluta mollitia alias incidunt qui laboriosam ratione doloribus cum
-    aspernatur voluptatum!
+  <mat-card-title>{{ card ? title : 'Please pick a card' }}</mat-card-title>
+  <mat-card-content class="p-l-null">
+    {{ card ? description : 'Please click on the stack to select the next card.' }}
   </mat-card-content>
 </mat-card>
